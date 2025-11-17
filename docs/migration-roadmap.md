@@ -20,7 +20,7 @@ This roadmap prioritizes Vallheru's PHP-to-Rust rewrite and coordinates the late
 
 ## PHP → Rust migration stages
 1. **Foundational runtime**
-   - Design Actix/axum-style routing mirroring the PHP entry-point split (`index.php` vs. feature controllers) and port the session/bootstrap logic noted in `docs/architecture.md` to a Rust middleware stack.
+   - Design axum-style routing mirroring the PHP entry-point split (`index.php` vs. feature controllers) and port the session/bootstrap logic noted in `docs/architecture.md` to a Rust middleware stack.
    - Replace ADODB/MySQL access with an async ORM (e.g., SQLx) that encapsulates config loading, query counting, and localization lookup.
 2. **Domain models and services**
    - Model players, inventory, quests, and guilds as typed structs; implement repositories/commands that correspond to the PHP helpers in `includes/functions.php`.
