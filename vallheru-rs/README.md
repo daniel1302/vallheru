@@ -30,6 +30,19 @@ cargo run
 
 Adjust the `cargo run` arguments to point to the proper binary if the workspace exposes more than one entry point.
 
+## Run the HTTP web server
+
+The `game-web` binary hosts the Axum HTTP server. Run it with a configuration file path (defaults to `config/game-web.toml` if the
+argument is omitted):
+
+```bash
+cd vallheru-rs
+cargo run -p game-web -- --config-path path/to/game-web.toml
+```
+
+Once the process prints `Listening on http://<host>:<port>`, the `/health` endpoint will return `{"status":"ok"}` and can be used
+for simple readiness checks.
+
 ## Helpful development commands
 
 - Format the workspace before committing:
