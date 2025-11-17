@@ -25,7 +25,6 @@
 | `includes/steal.php` | `steal` | Calculates thievery checks, XP payouts, arrests, and inventory transfers when robbing shops, decoupled from UI flow.【F:includes/steal.php†L32-L164】 |
 | `includes/ranks.php` | `selectrank` | Maps internal rank codes to localized titles based on gender without any controller context.【F:includes/ranks.php†L32-L60】 |
 | `includes/checkastral.php` | `checkastral` | Evaluates tribe-owned components to mark an astral machine as buildable/not, updating a single table independent of pages.【F:includes/checkastral.php†L32-L71】 |
-| `includes/counttime.php` | `counttime` | Provides countdown strings for reset timers, ready for reuse inside cron jobs or controllers.【F:includes/counttime.php†L32-L90】 |
 | `class/player_class.php` | `Player` | Domain aggregate representing a player: constructor hydrates stats, equipment, bonuses, settings, and helper methods for exp/buffs independent of web rendering.【F:class/player_class.php†L1-L200】 |
 | `class/quests_class.php` | `Quests` | Quest engine: enforces referrer checks, stores progress, renders texts, handles rewards, and invokes turn-fight helpers, all without HTTP awareness.【F:class/quests_class.php†L1-L200】 |
 | `class/team_class.php` | `Team` | Aggregates party members, merges their stats/skills/HP, splits experience, and propagates deaths for group combat scenarios.【F:class/team_class.php†L32-L197】 |
