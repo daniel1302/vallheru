@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "game-core",
+    "game-db",
+    "game-web",
+    "game-jobs",
+    "game-cli",
+]
+resolver = "2"
