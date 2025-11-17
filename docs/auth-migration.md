@@ -40,7 +40,7 @@ The new implementation should plug into the layering described in `docs/rust-arc
    - For APIs/WebSockets, use signed short-lived access tokens (e.g., `paseto` or `jsonwebtoken`) scoped to player ID and session ID so chat/combat streams can re-authenticate without sharing cookies.
 
 4. **Observability**
-   - Emit structured audit events (`login_succeeded`, `login_failed`, `session_rotated`, `password_upgraded`) through the existing tracing stack so `game-web` handlers can feed dashboards or alerts.
+   - Emit structured audit events (`login_succeeded`, `login_failed`, `session_rotated`) through the existing tracing stack so `game-web` handlers can feed dashboards or alerts.
 
 ## Migration steps
 1. **Schema preparation**
