@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: vallheru_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vallheru
+      POSTGRES_USER: vallheru
+      POSTGRES_PASSWORD: vallheru
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  adminer:
+    image: adminer:latest
+    container_name: vallheru_adminer
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+volumes:
+  pgdata:
