@@ -52,7 +52,7 @@ The new implementation should plug into the layering described in `docs/rust-arc
 
 3. **Login flow rewrite**
    - Build `/auth/login` handler: validate credentials, verify the Argon2 digest, rotate the session ID, persist the session row in PostgreSQL, and set cookies with hardened attributes.
-   - Mirror essential PHP behavior (ban checks, freeze windows) inside a Rust service so existing moderation data keeps working.
+   - Implement ban checks and freeze windows in the Rust service to match PHP behavior patterns.
 
 4. **Registration and password reset**
    - Update registration/reset handlers to exclusively issue Argon2 hashes and drop MD5 usage from new code paths.
